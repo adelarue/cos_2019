@@ -8,13 +8,13 @@ Julia is a "high-level, high-performance dynamic programming language for techni
 
 The first step is to install a recent version of Julia. The current version is 1.0.2\. Binaries of Julia for all platforms are available [here](http://julialang.org/downloads/).
 
-Open a julia session and install basic packages we will use in the class by running the following command:
+Open a Julia session and install basic packages we will use in the class by running the following command:
 ```jl
 using Pkg
 Pkg.add(["IJulia", "DataFrames", "CSV", "JLD2", "Plots"])
 ```
 
-[IJulia](https://github.com/JuliaLang/IJulia.jl) is the Julia version of IPython/Jupyter, that provides a nice notebook interface to run julia code, together with text and visualization. [DataFrames](https://github.com/JuliaData/DataFrames.jl) and [CSV](https://github.com/JuliaData/CSV.jl) help load, write and manipulate datasets. [JLD2](https://github.com/JuliaIO/JLD2.jl) enables easing storing of julia objects (the equivalent of pickle in Python). [Plots](https://github.com/JuliaPlots/Plots.jl) is a very powerful visualization library.
+[IJulia](https://github.com/JuliaLang/IJulia.jl) is the Julia version of IPython/Jupyter, that provides a nice notebook interface to run Julia code, together with text and visualization. [DataFrames](https://github.com/JuliaData/DataFrames.jl) and [CSV](https://github.com/JuliaData/CSV.jl) help load, write and manipulate datasets. [JLD2](https://github.com/JuliaIO/JLD2.jl) enables easing storing of Julia objects (the equivalent of pickle in Python). [Plots](https://github.com/JuliaPlots/Plots.jl) is a very powerful visualization library.
 
 If you encounter any difficulty in the installation or set up of those packages, you can refer to the instructions on their respective github page.
 
@@ -93,9 +93,12 @@ Pkg.add("RCall")
 Check that RCall has been properly installed by entering the following code in Julia
 
 ```jl
-using RCall
-R"1+2"
+julia> using RCall
+julia> R"1+2"
+RObject{RealSxp}
+[1] 3
 ```
+
 
 ## Questions?
 
