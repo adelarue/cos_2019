@@ -90,7 +90,7 @@ Pkg.add("RCall")
 
 ### Check your installation
 
-Check that RCall has been properly installed by entering the following code in Julia
+Check that RCall has been properly installed by replicating this simple example
 
 ```jl
 julia> using RCall
@@ -99,6 +99,7 @@ RObject{RealSxp}
 [1] 3
 ```
 
+If you do not obtain the desired output, RCall most likely failed to detect a proper version of R installed on your computer. Follow the instructions [here](http://juliainterop.github.io/RCall.jl/stable/installation.html) to fix the issue by installing R 3.4.0+ or pointing RCall into the right directory.  
 
 ## Questions?
 
