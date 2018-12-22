@@ -8,6 +8,8 @@ In addition to the installation instructions from the previous session, we will 
 - LinearAlgebra
 - Gadfly
 - DelimitedFiles
+- Distributions
+- PyPlot
 - Mosek (see below)
 
 # Install Mosek instructions
