@@ -49,6 +49,6 @@ We will be learning the `R` programming language for statistical computation. To
 ## Task 5: Begin considering project team and data set
 
 * There will be a sustained project over the first half of the seminar which will be done in teams and presented in Session 5.
-* Begin planning your team and the data set you will work with. Both choices will be a part of the pre-assignment for Session 2.
+* Begin planning your team and the data set you will work with. Both decisions will be a part of the pre-assignment for Session 2.
 
 No results need to be submitted on Stellar for this pre-assignment.
