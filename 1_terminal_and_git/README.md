@@ -45,5 +45,10 @@ We will be learning the `R` programming language for statistical computation. To
 ** Next to "Authentication method", select "Password"
 ** Next to "Password", type your MIT log-in password.
 * Click "Save", and then click "Mount". Open Windows Exporer, and verify that there is a new folder called <your mit id>@'athena.dialup.mit.edu'. Click on it, and there will be some folders in it.
+   
+## Task 5: Begin considering project team and data set
+
+* There will be a sustained project over the first half of the seminar which will be done in teams and presented in Session 5.
+* Begin planning your team and the data set you will work with. Both choices will be a part of the pre-assignment for Session 2.
 
 No results need to be submitted on Stellar for this pre-assignment.
