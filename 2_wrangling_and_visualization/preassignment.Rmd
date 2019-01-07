@@ -1,0 +1,58 @@
+---
+title: "Preassignment"
+author: "By Me"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+nycflights13::flights %>% 
+	group_by(month, carrier) %>% 
+	summarise(mean_dep_delay = mean(dep_delay, na.rm = T),
+			  mean_arr_delay = mean(arr_delay, na.rm = T),
+			  n = n()) %>% 
+	ggplot() + 
+	aes(x = mean_dep_delay, y = mean_arr_delay, color = carrier) + 
+	geom_point() + 
+	facet_wrap(~carrier)
+	
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+This is a preassignment the Introduction to Data Science session. Please follow the instructions on `README.md` to run this assignment. 
+
+```{r}
+
+
+```
+
+### Chart C
+
+```{r}
+nycflights13::flights %>% 
+	group_by(carrier) %>% 
+	summarise(n = n()) %>% 
+	arrange(desc(n)) %>% 
+	mutate(carrier = factor(carrier, levels = .$carrier)) %>% 
+	ggplot() + 
+	aes(x = carrier, y = n) + 
+	geom_bar(stat = 'identity')
+```
+
