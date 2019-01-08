@@ -74,8 +74,6 @@ To test that you have installed these packages successfully, please:
 
 
 
-#################
-
 
 ## Additional Resources
 
