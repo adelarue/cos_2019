@@ -4,6 +4,17 @@ In the first part of the session, we will introduce basic techniques in data wra
 
 In the second part of the session, we will introduce RMarkdown.
 
+## Preassignment 0: Project Prep
+
+By Thursday, we expect you to: 
+
+1. Choose a project group. 
+2. Choose a data set that interests you. It can be from your research or from an online venue like [Kaggle](http://www.kaggle.com). 
+
+In addition to the below, we therefore expect you to turn in on Stellar the names of your project group and a brief description of your data set, including how you will access it and what makes it interesting. 
+
+If you would like a partner but are having trouble finding one, please email the instructors and we will do our best to pair you up. 
+
 ## Pre-assignment 1: Keeping current
 
 To ensure that you have the most current versions of all files, please fire up a terminal, navigate to the directory into which you cloned the full set of materials for the course, and run `git pull`.  (Refer back to Session 1 if you're having trouble here.)
