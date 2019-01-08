@@ -338,32 +338,22 @@ by.bedroom.rating %>%
 #'
 #' *ANSWER:*
 #' 
- listings %>%	
-filter(!is.na(review_scores_rating)) %>%	
-  group_by(review_scores_rating) %>%	
-  summarize(med.price = median(nprice),	
-            num = n()) %>%	
-  ggplot(aes(x=review_scores_rating, y=med.price, size=num)) +	
-  geom_point(color='blue', alpha=0.5) +	
-  labs(x='Score', y='Median Price', size='# Reviews',	
-       title='Median Price Trend by Review Score') +	
-  theme_bw()	
 
 #' =================================================================================
- 
- 
- ### Saving a plot	
- 
- #' By the way, you can flip back through all the plots you've created in RStudio using the 
- #' navigation arrows, and it's also always a good idea to "Zoom" in on plots.  	
- 
- #' When you finally get a plot you like, you can "Export" it to a PDF (recommended), image, 
- #' or just to the clipboard.  
- #' Another way to save a plot is to use `ggsave()`, which saves the last plot by default, 
- #' for example: 
- ggsave('price_vs_score.pdf') 
- 
- 
+
+
+### Saving a plot	
+
+#' By the way, you can flip back through all the plots you've created in RStudio using the 
+#' navigation arrows, and it's also always a good idea to "Zoom" in on plots.  	
+
+#' When you finally get a plot you like, you can "Export" it to a PDF (recommended), image, 
+#' or just to the clipboard.  
+#' Another way to save a plot is to use `ggsave()`, which saves the last plot by default, 
+#' for example: 
+ggsave('price_vs_score.pdf') 
+
+
 #' ## Other geometries: Line plots, Box plots, and Bars
 #' We will now quickly run through a few of the other geometry options available, 
 #' but truly, we don't need to spend a lot of time here since each follows the same grammar as before 
@@ -373,20 +363,20 @@ filter(!is.na(review_scores_rating)) %>%
 #' 
 #' First let's group the listings by neighbourhood_cleansed and save the summary information
 #'  we want to plot into its own object:	
- by.neighbor = listings %>%	
-   group_by(neighbourhood_cleansed) %>%	
-   summarize(med.price = median(nprice))
+by.neighbor = listings %>%	
+  group_by(neighbourhood_cleansed) %>%	
+  summarize(med.price = median(nprice))
 #' 
 #' 
 #' 
 #' ### Line Plots
 #' We have already seen smooth line plots in some previous example, let's now see a standard line plot
 #' by running 'geom_line':
- 
-  by.neighbor %>%	
-   ggplot(aes(x=neighbourhood_cleansed, y=med.price)) + 	
-   geom_point() +	
-   geom_line(group=1)	
+
+by.neighbor %>%	
+  ggplot(aes(x=neighbourhood_cleansed, y=med.price)) + 	
+  geom_point() +	
+  geom_line(group=1)	
 
 #' Because our `x` is not a continuous variable, but a list of neighborhoods, 
 #' `geom_line` thinks the neighborhoods are categories that each need their own line --- 
@@ -550,24 +540,21 @@ listings %>%
 #' 
 #' *ANSWER:*
 ## ----exercise-------------------------------------------------------
-listings %>%
-  group_by(bedrooms, bathrooms) %>%
-  summarize(med = median(nprice)) %>%
-  ggplot(aes(x=bedrooms, y=bathrooms, fill=med)) +
-  geom_tile()
+
+
+
+
 
 #' 
 #' BONUS: We can enforce that the color scale runs between two colors by adjusting 
 #' a `scale_fill_gradient` theme, like this:
 ## ----exercise-------------------------------------------------------
-listings %>%
-  group_by(bedrooms, bathrooms) %>%
-  summarize(med = median(nprice)) %>%
-  ggplot(aes(x=bedrooms, y=bathrooms, fill=med)) +
-  geom_tile() +
-  scale_fill_gradient(low = "green", high = "red") +
-  theme_minimal() +
-  labs(x='Bedrooms', y='Bathrooms', fill='Median price')
+
+
+
+
+
+
 
 #' 
 #' 
@@ -654,7 +641,7 @@ long.price %>% head()  # take a peek
 #' 
 #' 
 #' **Quick exercise:** What's the gather command for the quarterly earnings table above?
-#' *Answer:* `gather(Quarter, Earnings, Qtr.1, Qtr.2, Qtr.3, Qtr.4)`
+#' *Answer:* 
 #' 
 #' 
 #' To spread it back out into the original wide format, we can use `spread`. 
@@ -810,13 +797,6 @@ rooms.prices %>%
 #' 
 #' *ANSWER:*
 ## ------------------------------------------------------------------------
-listings %>%
-  gather(rating_type, rating, review_scores_cleanliness, review_scores_location, review_scores_value) %>%
-  group_by(neighbourhood_cleansed, rating_type) %>%
-  summarise(mean_rating = mean(rating, na.rm=TRUE)) %>%
-  ggplot(aes(neighbourhood_cleansed, mean_rating, fill=rating_type)) +
-  geom_bar(stat='identity', position='dodge') +
-  theme(axis.text.x=element_text(angle=60, hjust=1))
 
 #'
 #' # Wrapping Up
