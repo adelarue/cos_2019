@@ -1,0 +1,80 @@
+---
+title: "Example Dashboard"
+author: You! 
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    theme: united
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+# Basic Analysis
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Top Rated Neighbourhoods
+
+```{r}
+library(tidyverse)
+library(knitr)
+df <- read_csv('../data/listings.csv')
+
+top_rated_neighborhood <- df %>% 
+  group_by(neighbourhood) %>% 
+  summarise(review_scores_rating = mean(review_scores_rating, na.rm = T)) %>% 
+  arrange(desc(review_scores_rating)) %>% 
+  filter(neighbourhood != 'NA')
+```
+
+```{r}
+top_rated_neighborhood %>% 
+  head(10) %>% 
+  kable()
+  
+  
+  # 
+  # mutate(neighbourhood = factor(neighbourhood, levels = .$neighbourhood)) %>% 
+  # ggplot() + 
+  # aes(x = neighbourhood, y = review_scores_rating) + 
+  # geom_bar(stat = 'identity') + 
+  # coord_flip() + 
+  # theme_bw() 
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Analysis
+
+There are ```r nrow(top_rated_neighborhood)``` neighborhoods represented in the data set. Of these, the highest rated is ```r top_rated_neighborhood$neighbourhood[1]``` and the lowest is ```r top_rated_neighborhood$neighbourhood[nrow(top_rated_neighborhood)]```. This data is current as of ```r lubridate::today()```
+
+
+### Histogram of Ratings
+
+```{r}
+df %>% 
+  ggplot() + 
+  aes(x = review_scores_rating) + 
+  geom_histogram() + 
+  theme_bw()
+```
+
+# Interactivity Example
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Map of Locations
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Leaflet
+
+Leaflet is an interactive visualization platform based on `D3.js`. It is possible to construct Leaflet visualizations directly, but the `leaflet` package provides a convenient way to  build Leaflet visualizations from your data. Leaflet and many other interesting HTML-based widgets are 100% compatible with RMarkdown in all formats, making it easy to embed interesting interactive graphics into your work. 
