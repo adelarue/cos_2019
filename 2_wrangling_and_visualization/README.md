@@ -19,18 +19,15 @@ It may be helpful, however, to also keep handy the `S2_script_full.R` and `S2_ex
 
 ## Pre-assignment 2: Installing libraries
 
-We will use three libraries for this session: `tidyr`, `dplyr`, and `ggplot2`.  Before Thursday's session, ensure that you install them, and are able to load them into an R session in RStudio.  You can install them by executing the following commands in the RStudio console:
+We will use three libraries for this session: `tidyr`, `dplyr`, and `ggplot2`. These three packages (any many more) can all be conveniently loaded using the metalibrary `tidyverse`. You should have previously installed `tidyverse` prior to Session 1. In case you haven't, do so now: 
+
 ```
-install.packages('dplyr')
-install.packages('tidyr')
-install.packages('ggplot2')
+install.packages('tidyverse')
 ```
 
 You should test that the libraries will load by then running
 ```
-library(dplyr)
-library(tidyr)
-library(ggplot2)
+library(tidyverse)
 ```
 
 Then test that dplyr/tidyr work by executing the command:
@@ -52,8 +49,6 @@ which should produce a cloud of points centered around the origin.
 
 **Please upload a screenshot of these two outputs to Stellar (the table and the scatter plot).**
 
-
-
 ## Pre-assignment 3: Reproducible Reporting with RMarkdown
 
 [R Markdown](https://rmarkdown.rstudio.com/) is a framework for easily producing interactive reports, presentations, and dashboards in `R`. 
@@ -70,10 +65,6 @@ To test that you have installed these packages successfully, please:
 2. Open the file `preassignment.rmd` in RStudio. 
 3. Click the "Knit" button at the top of the source editor, or press `cmd + shift + k` (`ctrl + shift + k` on Windows). The "Knit" button is the one circled in [this image](http://cinf401.artifice.cc/images/workflow-25.png).
 4. After a few moments, RStudio should pop up with a new window containing a dashboard that looks like [this](https://philchodrow.github.io/mban_orientation/data_science_intro/preassignment/preassignment1.html). If your dashboard matches the example, submit it on Stellar. If not, please email the instructors with the error message you received. 
-
-
-
-
 
 ## Additional Resources
 
