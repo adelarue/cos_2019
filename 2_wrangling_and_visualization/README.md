@@ -9,7 +9,7 @@
 To prepare RStudio to work with R Markdown, run the following code in your RStudio console. 
 
 ```{r}
-install.packages(c('knitr', 'rmarkdown', 'flexdashboard'))
+install.packages(c('knitr', 'rmarkdown', 'flexdashboard', 'leaflet'))
 ```
 
 To test that you have installed these packages successfully, please: 
