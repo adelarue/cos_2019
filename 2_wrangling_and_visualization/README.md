@@ -15,6 +15,15 @@ In addition to the below, we therefore expect you to turn in on Stellar the name
 
 If you would like a partner but are having trouble finding one, please email the instructors and we will do our best to pair you up. 
 
+### Example Preassignment 0: 
+
+The following text gives an example of an acceptable submission for the project preparation. 
+
+*Team members: Andreea G.*
+
+*I will be looking at the Kaggle dataset on ski resorts, which is available to download at https://www.kaggle.com/beaubellamy/ski-resort. The dataset lists different ski resorts along with attributes such as country / region, altitude, size, difficulty of slopes, trails, snow reliability, facilities and equipment, average ticket price per age group, other services available. Here are two examples of questions I could investigate: 1. Pricing depending on the ski attributes of the resort, and 2. Number of resorts depending on the attributes of the region. One limitation of this dataset is the missing information of other touristic features of the given regions.*
+
+
 ## Pre-assignment 1: Keeping current
 
 To ensure that you have the most current versions of all files, please fire up a terminal, navigate to the directory into which you cloned the full set of materials for the course, and run `git pull`.  (Refer back to Session 1 if you're having trouble here.)
