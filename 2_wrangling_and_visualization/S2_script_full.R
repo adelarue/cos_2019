@@ -6,7 +6,7 @@
 # 1. Base R basics
 # 2. tidyr and dplyr basics
 # 3. ggplot basics
-# 4. Deeper with gather/spread and joins
+# 4. Deeper with gather/spread and joins (time allowing)
 
 #' # Introducing the Tidyverse: `dplyr`
 #' 
@@ -31,8 +31,8 @@
 #' Now that we have the libraries installed, we'll load them into our current R session by calling:
 #' 
 ## ----message=FALSE-------------------------------------------------------
-library(tidyr)
-library(dplyr)
+library(tidyverse)
+
 
 #' 
 #' ## Basic exploration and cleaning
@@ -42,7 +42,7 @@ library(dplyr)
 #' script (or following along in the class script), type and execute:
 #' 
 ## Let's load up the AirBnB data.  
-raw_listings <- read.csv('../data/listings.csv')
+raw_listings <- read_csv('../data/listings.csv')
 #' We can look in Environment and see there's actually 3,585 rows of 95 variables.
 #' 
 #' 
@@ -849,7 +849,7 @@ listings %>%
 #' (https://t.co/3WCaDxGnJR), and countless others that have [clean]
 #' (http://http://www.pro-football-reference.com/), [open]
 #' (http://www.kdnuggets.com/datasets/index.html), and interesting data just waiting for you 
-#' to `read.csv`.  You don't need proprietary data [to make headlines]
+#' to `read_csv`.  You don't need proprietary data [to make headlines]
 #' (http://fivethirtyeight.com/features/a-plagiarism-scandal-is-unfolding-in-the-crossword-world/), 
 #' and some data that seems like it would be hard to get is actually [out there in the wild]
 #' (https://www.kaggle.com/kaggle/hillary-clinton-emails).

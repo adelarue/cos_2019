@@ -6,7 +6,7 @@
 # 1. Base R basics
 # 2. tidyr and dplyr basics
 # 3. ggplot basics
-# 4. Deeper with gather/spread and joins
+# 4. Deeper with gather/spread and joins (time allowing)
 
 #' # Introducing the Tidyverse: `dplyr`
 #' 
