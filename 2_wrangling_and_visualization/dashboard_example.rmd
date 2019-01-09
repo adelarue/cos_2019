@@ -17,7 +17,7 @@ library(flexdashboard)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Top Rated Neighbourhoods
+
 
 ```{r}
 library(tidyverse)
@@ -31,9 +31,28 @@ top_rated_neighborhood <- df %>%
   filter(neighbourhood != 'NA')
 ```
 
+### Histogram of Ratings
+
+```{r}
+df %>% 
+  ggplot() + 
+  aes(x = review_scores_rating) + 
+  geom_histogram() + 
+  theme_bw()
+```
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Analysis
+
+There are ```r nrow(top_rated_neighborhood)``` neighborhoods represented in the data set. Of these, the highest rated is ```r top_rated_neighborhood$neighbourhood[1]``` and the lowest is ```r top_rated_neighborhood$neighbourhood[nrow(top_rated_neighborhood)]```. This data is current as of ```r lubridate::today()```
+
+### Top Rated Neighbourhoods
 ```{r}
 top_rated_neighborhood %>% 
-  head(10) %>% 
+  head(5) %>% 
   kable()
   
   
@@ -46,30 +65,26 @@ top_rated_neighborhood %>%
   # theme_bw() 
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
-
-### Analysis
-
-There are ```r nrow(top_rated_neighborhood)``` neighborhoods represented in the data set. Of these, the highest rated is ```r top_rated_neighborhood$neighbourhood[1]``` and the lowest is ```r top_rated_neighborhood$neighbourhood[nrow(top_rated_neighborhood)]```. This data is current as of ```r lubridate::today()```
 
 
-### Histogram of Ratings
-
-```{r}
-df %>% 
-  ggplot() + 
-  aes(x = review_scores_rating) + 
-  geom_histogram() + 
-  theme_bw()
-```
 
 # Interactivity Example
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Map of Locations
+### Map of Listing Locations
+
+```{r}
+library(leaflet)
+m <- leaflet(df) %>% addTiles()
+m %>% 
+  addCircleMarkers(radius = 1)
+```
+
+
+
+
 
 
 Column {data-width=350}

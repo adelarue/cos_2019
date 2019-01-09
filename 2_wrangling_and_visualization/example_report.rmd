@@ -1,7 +1,7 @@
 ---
-title: "Example"
+title: "Introduction to R Markdown"
 author: Phil Chodrow
-date: March 22, 2005
+date: Thursday, January 10th, 2019
 output: 
   html_document:
     theme: united
@@ -20,7 +20,7 @@ When doing analysis, we typically generate code, plots, explanatory text, narrat
 
 # Markdown
 
-Markdown is a simple language invented by [John Gruber](www.daringfireball.com). Originally, the purpose of Markdown was to easily generate webpages and blog posts without the need for writing complex HTML. Markdown's primary strength is the display of simple text, but there are lots of options: 
+Markdown is a simple language invented by [John Gruber](https://daringfireball.net/projects/markdown/). Originally, the purpose of Markdown was to easily generate webpages and blog posts without the need for writing complex HTML. Markdown's primary strength is the display of simple text, but there are lots of options: 
 
 - *Italic* and **bold** typfaces. 
 - Section headers like the one above this list, delimited using \#. 
@@ -35,7 +35,7 @@ To write in Markdown, open any text editor (RStudio works great!) and start writ
 
 # R Markdown {.tabset}
 
-Markdown itself is extremely useful, but R Markdown is something especially magical. R Markdown implements the literate programming paradigm by enabling you to smoothly intersperse code, outputs like tables and graphics, and expository text all in the same document. Let's run some simple examples: 
+Markdown itself is extremely useful, but R Markdown is something especially magical. R Markdown implements the literate programming paradigm by enabling you to smoothly intersperse code, outputs like tables and graphics, and expository text all in the same document. Let's run some simple examples. First, we'll make a code chunk and load the data set. 
 
 ```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -45,7 +45,7 @@ df <- read_csv('../data/listings.csv')
 
 ## Peeking at Data 
 
-For a start, we can embed views of our data. Let's look at the top 10 priciest listings:  
+For a start, we can embed views of our data. Let's look at the 10 lowest-rated listings. 
 
 ```{r}
 df %>% 
@@ -77,7 +77,7 @@ top_rated_neighborhood <- df %>%
   arrange(desc(review_scores_rating))
 ```
 
-There are ```nrow(top_rated_neighborhood)``` neighborhoods represented in the data set. Of these, the highest rated is ```r top_rated_neighborhood$neighbourhood[1]``` and the lowest is ```r top_rated_neighborhood$neighbourhood[nrow(df)]```. This data is current as of ```r lubridate::today()```
+There are ```r nrow(top_rated_neighborhood)``` neighborhoods represented in the data set. Of these, the highest rated is ```r top_rated_neighborhood$neighbourhood[1]```. This analysis is current as of ```r lubridate::today()```
 
 ## Graphics
 
@@ -105,21 +105,9 @@ import sys
 print("This is Python " + sys.version)
 ```
 
-# Use RMarkdown For... {.tabset}
-
-## Reports
-
-Like this one! 
-
-## Slides
-
-<!-- ![reveal](https://d33wubrfki0l68.cloudfront.net/4e9287e6d9a3d7372d8f2bfc25f6b1799aee28dc/7fb23/lesson-images/slides-1-slideshow.png) -->
-
-## Dashboards
-
-<!-- ![flex](https://goo.gl/images/ucZQfH) -->
-
 # Resources
 
-
+- The [R Markdown website](https://rmarkdown.rstudio.com/), including documentation for reports, slides, dashboards, and more. 
+- [Flexdashboard reference](https://rmarkdown.rstudio.com/flexdashboard/index.html) for working on your project presentations. 
+- [Introduction to literate programming](https://en.wikipedia.org/wiki/Literate_programming)
 
