@@ -1,0 +1,85 @@
+---
+title: "Introduction to R Markdown"
+author: Phil Chodrow
+date: Thursday, January 10th, 2019
+output: 
+  html_document:
+    theme: united
+    number_sections: true
+    toc: true
+    toc_depth: 2
+    toc_float: 
+      collapsed: false
+---
+
+# Literate Programming
+
+When doing analysis, we typically generate code, plots, explanatory text, narrative text, and other artifacts. The idea of **literate programming** is simple: 
+
+> Put analysis code, outputs, and text the *same document*, and then get different *views* of that document according to the appropriate audience.  
+
+# Markdown
+
+Markdown is a simple language invented by [John Gruber](https://daringfireball.net/projects/markdown/). Originally, the purpose of Markdown was to easily generate webpages and blog posts without the need for writing complex HTML. Markdown's primary strength is the display of simple text, but there are lots of options: 
+
+- *Italic* and **bold** typfaces. 
+- Section headers like the one above this list, delimited using \#. 
+- Especially important for our purposes, the inclusion of images (such as statistical graphics), as well as advanced HTML objects (interactive maps, for example). 
+- Code display
+
+```{r, eval = FALSE}
+print("Hello World!")
+```
+
+To write in Markdown, open any text editor (RStudio works great!) and start writing! There are lots of great Markdown references online. 
+
+# R Markdown {.tabset}
+
+Markdown itself is extremely useful, but R Markdown is something especially magical. R Markdown implements the literate programming paradigm by enabling you to smoothly intersperse code, outputs like tables and graphics, and expository text all in the same document. Let's run some simple examples. First, we'll make a code chunk and load the data set. 
+
+
+## Peeking at Data 
+
+For a start, we can embed views of our data. Let's look at the 10 lowest-rated listings. 
+
+```{r}
+
+```
+
+This is the magic of R Markdown: anything you can do in `R`, you can execute, visualize, and explain in the same document. 
+
+## Inline computations
+
+As you are crafting expository text, you might wish to reference a given number or name from the code. 
+For example, when describing the data set, you might run `nrow(df)` and `ncol(df)` and then manually write in the answers: 
+
+> The data has 3585 rows and 95 columns. 
+
+Of course, that's correct all on its own, but...what happens when you get an updated data set from your collaborators? Think you're going to remember to correct the manually-typed number in all your documents?  Try this instead: 
+
+
+RMarkdown gives you the ability to neatly insert the results of your computation into your document. This can get very handy when you want to include slightly more complex descriptions: 
+
+
+
+
+## Graphics
+
+Of course, the main event here is graphics. Any graphics you can generate in `R` go seamlessly into your reporting. 
+
+
+
+## Math and Code
+
+RMarkdown is well-integrated with MathJax, which allows you to write $\LaTeX$-style mathematics within your document. 
+
+ 
+
+You can display and even execute code -- `R` is included, of course, but how about this: 
+
+# Resources
+
+- The [R Markdown website](https://rmarkdown.rstudio.com/), including documentation for reports, slides, dashboards, and more. 
+- [Flexdashboard reference](https://rmarkdown.rstudio.com/flexdashboard/index.html) for working on your project presentations. 
+- [Introduction to literate programming](https://en.wikipedia.org/wiki/Literate_programming)
+
