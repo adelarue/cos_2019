@@ -26,7 +26,7 @@
 #' 
 #' If you did the homework, you already have the libraries we need 
 #' installed, but if not, install them with: `install.packages('tidyr')` 
-#' and `install.packages('dplyr')`.
+#' and `install.packages('dplyr')`. Or you can install both with `install.packages('tidyverse')`.
 #' 
 #' Now that we have the libraries installed, we'll load them into our current R session by calling:
 #' 
