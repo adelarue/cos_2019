@@ -50,9 +50,6 @@ raw_listings <- read.csv('../data/listings.csv')
 #' The 'str' command displays the structure of an object:
 str(raw_listings)  
 
-#' Notice here that the price entries are not factors. Factors are a vector of integer values with
-#' a corresponding set of character values to use when the factor is displayed.
-
 #' The 'summary' command gives summary statistics	
 summary(raw_listings)   
 #' The 'colnames' command displays just column names	
@@ -85,6 +82,10 @@ table(raw_listings$room_type, raw_listings$accommodates >= 4)
 
 #' Now if we want to see the distribution of prices? We want to run something like 'hist(listings$price)'
 #' However, this wouldn't work because the prices are factors.
+#' 
+#' Factors are a vector of integer values with a corresponding set of character values to use when 
+#' the factor is displayed.
+#' 
 #'  so we'll need to convert them to integers. 
 
 #' The 'function()' command allows us to create a function as an R object
@@ -125,14 +126,6 @@ raw_listings %>%
 #' Note that the tidyverse packages generally do not change the dataframe objects they act on. 
 #' For example, the code above doesn't change `raw_listings`, but instead returns a new dataframe 
 #' that has the same data as `raw_listings`, plus an extra column.
-#' 
-# Let's make a new variable that will have the numeric version of price in it:	
-raw_listings$numericprice = as.numeric(gsub('\\$|,', '', raw_listings$price))	
-#' Now let's try again to see the distribution of prices:
-hist(raw_listings$numericprice)	
-#' 
-# The plot is not ideal, but at least it worked. Let's try drawing a scatter plot of price vs. reviews:	
-plot(raw_listings$review_scores_rating, raw_listings$nprice)	
 #' 
 #' Now, let's learn some more verbs. Let's say we're interested in understanding the relationship
 #'  between bedrooms and price. But some of the listings don't have data on bathrooms; 
@@ -300,7 +293,7 @@ by.rating.bedroom %>%
 #'  One way to get that extra dimension is to color these points by the number of bedrooms. 
 #' 
 ## ------------------------------------------------------------------------
-by.bedroom.rating %>%
+by.rating.bedroom %>%
   ggplot(aes(x=review_scores_rating, y=med.price, color=factor(bedrooms))) +
   geom_point()
 
@@ -316,7 +309,7 @@ by.bedroom.rating %>%
 #' The 'geom_smooth' command creates a line that represents smoothed conditional means
 #' 
 ## ------------------------------------------------------------------------
-by.bedroom.rating %>%
+by.rating.bedroom %>%
   ggplot(aes(x=review_scores_rating, y=med.price, color=factor(bedrooms))) +
   geom_point() +
   geom_smooth(method = lm)
