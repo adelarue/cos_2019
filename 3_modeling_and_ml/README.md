@@ -11,6 +11,12 @@ In the first part, we will build some predictive models using the Airbnb data se
 
 # Before the Session
 
+## Project Preparation
+
+Using the tools you learned in Session 2, produce a simple R Markdown report (optionally as a dashboard) including at least two visualizations and at least one summary table related to your data set. For each, include at least one sentence describing what makes the figure interesting and relevant. Turn in our report as a .html file on Stellar. 
+
+## Technical Preparation
+
 First, `git pull` to ensure that you have the most up-to-date versions of all of the files for this course.  The pre-lecture assignment for this session is **pre_lecture_assignment.R**.  Please open the file, install the R packages there which are not already installed on your computer, and double-check that you obtain the same output as in **output-1.png** and **output-2.png**.
 
 **Upload a screenshot of your final R Console to Stellar.**
