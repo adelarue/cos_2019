@@ -13,7 +13,9 @@ In the first part, we will build some predictive models using the Airbnb data se
 
 ## Project Preparation
 
-Using the tools you learned in Session 2, produce a simple R Markdown report (optionally as a dashboard) including at least two visualizations and at least one summary table related to your data set. For each, include at least one sentence describing what makes the figure interesting and relevant. Turn in our report as a .html file on Stellar. 
+Working with your project team, use the tools you learned in Session 2 to produce a simple R Markdown report (optionally as a dashboard). Include at least two visualizations and at least one summary table related to your data set. For each, include at least one sentence describing what makes the figure interesting and relevant. Turn in your report as a .html file on Stellar. 
+
+Each team member should submit a report. It is acceptable for each of you to submit the same table and figures; however, **we strongly recommend that each of you type out the code individually** (rather than copy/paste or turning in multiple copies of the same file). 
 
 ## Technical Preparation
 
