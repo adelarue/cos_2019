@@ -45,3 +45,12 @@ model %>% fit(
 If there are no errors, take a screenshot of the output in your console and post the result to Stellar. 
 You should see ten progress bars and a loss next to them. If you do have any trouble with getting 
 the packages to work, please email me at zblanks@mit.edu and we'll figure out a solution.
+
+# Possible Errors
+Sometimes installation issues arise with using Keras in RStudio. If you would prefer, I have provided Jupyter notebooks
+that can be used to follow along with the lecture in Python. To install Keras on your machine you will need to execute
+the following command:
+
+`conda install keras`
+
+This will cause Anaconda to download the appropriate files which can then be used to follow the lecture in Python.
