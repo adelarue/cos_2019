@@ -17,8 +17,6 @@ library(flexdashboard)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-
-
 ```{r}
 library(tidyverse)
 library(knitr)
@@ -30,7 +28,6 @@ top_rated_neighborhood <- df %>%
   arrange(desc(review_scores_rating)) %>% 
   filter(neighbourhood != 'NA')
 ```
-
 ### Histogram of Ratings
 
 ```{r}
@@ -54,19 +51,7 @@ There are ```r nrow(top_rated_neighborhood)``` neighborhoods represented in the 
 top_rated_neighborhood %>% 
   head(5) %>% 
   kable()
-  
-  
-  # 
-  # mutate(neighbourhood = factor(neighbourhood, levels = .$neighbourhood)) %>% 
-  # ggplot() + 
-  # aes(x = neighbourhood, y = review_scores_rating) + 
-  # geom_bar(stat = 'identity') + 
-  # coord_flip() + 
-  # theme_bw() 
 ```
-
-
-
 
 # Interactivity Example
 
@@ -81,11 +66,6 @@ m <- leaflet(df) %>% addTiles()
 m %>% 
   addCircleMarkers(radius = 1)
 ```
-
-
-
-
-
 
 Column {data-width=350}
 -----------------------------------------------------------------------

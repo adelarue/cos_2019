@@ -37,14 +37,24 @@ To write in Markdown, open any text editor (RStudio works great!) and start writ
 
 Markdown itself is extremely useful, but R Markdown is something especially magical. R Markdown implements the literate programming paradigm by enabling you to smoothly intersperse code, outputs like tables and graphics, and expository text all in the same document. Let's run some simple examples. First, we'll make a code chunk and load the data set. 
 
-
 ## Peeking at Data 
 
 For a start, we can embed views of our data. Let's look at the 10 lowest-rated listings. 
 
-```{r}
-
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+library(knitr)
+df <- read_csv('../data/listings.csv')
 ```
+
+```{r, echo=FALSE}
+df %>% 
+  select(name, neighbourhood, review_scores_rating) %>% 
+  arrange(review_scores_rating) %>% 
+  head(10) %>% 
+  kable()
+```
+
 
 This is the magic of R Markdown: anything you can do in `R`, you can execute, visualize, and explain in the same document. 
 
@@ -57,6 +67,8 @@ For example, when describing the data set, you might run `nrow(df)` and `ncol(df
 
 Of course, that's correct all on its own, but...what happens when you get an updated data set from your collaborators? Think you're going to remember to correct the manually-typed number in all your documents?  Try this instead: 
 
+> The data set has ```r nrow(df)``` rows and ```r ncol(df)``` columns.  
+
 
 RMarkdown gives you the ability to neatly insert the results of your computation into your document. This can get very handy when you want to include slightly more complex descriptions: 
 
@@ -67,15 +79,31 @@ RMarkdown gives you the ability to neatly insert the results of your computation
 
 Of course, the main event here is graphics. Any graphics you can generate in `R` go seamlessly into your reporting. 
 
+```{r, echo = FALSE, warning = FALSE}
+top_rated_neighborhood <- df %>% 
+  group_by(neighbourhood) %>% 
+  summarise(review_scores_rating = mean(review_scores_rating, na.rm = T)) %>% 
+  arrange(desc(review_scores_rating))
+
+top_rated_neighborhood %>% 
+  ggplot() +
+  aes(x = neighbourhood, y = review_scores_rating) + 
+  geom_bar(stat='identity')
+```
 
 
 ## Math and Code
 
 RMarkdown is well-integrated with MathJax, which allows you to write $\LaTeX$-style mathematics within your document. 
 
- 
+$$f(\beta) = \lVert \mathbf{y} - \mathbf{X}\beta \rVert_2^2$$
 
 You can display and even execute code -- `R` is included, of course, but how about this: 
+
+```{python, python.reticulate=FALSE}
+import sys
+print('This is Python ' + sys.version)
+```
 
 # Resources
 

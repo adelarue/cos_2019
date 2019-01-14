@@ -300,7 +300,7 @@ by.rating.bedroom %>%
 #'  One way to get that extra dimension is to color these points by the number of bedrooms. 
 #' 
 ## ------------------------------------------------------------------------
-by.bedroom.rating %>%
+by.rating.bedroom %>%
   ggplot(aes(x=review_scores_rating, y=med.price, color=factor(bedrooms))) +
   geom_point()
 
@@ -316,7 +316,7 @@ by.bedroom.rating %>%
 #' The 'geom_smooth' command creates a line that represents smoothed conditional means
 #' 
 ## ------------------------------------------------------------------------
-by.bedroom.rating %>%
+by.rating.bedroom %>%
   ggplot(aes(x=review_scores_rating, y=med.price, color=factor(bedrooms))) +
   geom_point() +
   geom_smooth(method = lm)
@@ -338,8 +338,7 @@ by.bedroom.rating %>%
 #'
 #' *ANSWER:*
 #' 
- listings %>%	
-filter(!is.na(review_scores_rating)) %>%	
+listings %>%	filter(!is.na(review_scores_rating)) %>%	
   group_by(review_scores_rating) %>%	
   summarize(med.price = median(nprice),	
             num = n()) %>%	
