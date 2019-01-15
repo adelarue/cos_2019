@@ -8,7 +8,7 @@ output:
     slide_level: 2
     theme: blood
     highlight: zenburn
-    # css: slide_style.css
+    css: style_2.css
     reveal_options:
       slideNumber: false
       previewLinks: true
@@ -163,9 +163,14 @@ If $X = (x_1,\ldots,x_n)$, then
 ## What do these do? {.center}
 <br/>
 
-> 1. `c('To', 'boldly', 'go') %>% map(nchar)`
-> 2. `c('To', 'boldly', 'go') %>% map(toupper)`
-> 3. `c('To', 'boldly', 'go') %>% map(rep, 2)`
+```{r, eval = FALSE}
+c('To', 'boldly', 'go') %>% map(nchar)
+
+c('To', 'boldly', 'go') %>% map(toupper)
+
+c('To', 'boldly', 'go') %>% map(rep, 2)
+```
+
 
 ## `Reduce()` Combines {.center}
 
@@ -175,8 +180,11 @@ If $g$ is a binary function, then
 
 ## What  do these do? {.center}
 
-> 1. `c('To', 'boldly', 'go') %>% map(nchar) %>% reduce(sum)`
-> 2. `c('To', 'boldly', 'go') %>% reduce(paste)`  
+```{r, eval = FALSE}
+c('To', 'boldly', 'go') %>% map(nchar) %>% reduce(sum)
+
+c('To', 'boldly', 'go') %>% reduce(paste)
+```
 
 # Case Study, Part 2 {.center}
 
@@ -276,9 +284,10 @@ knitr::include_graphics('figs/journey_2.png')
 ```{r, eval = FALSE}
 prices_modeled <- prices %>%
   nest(-listing_id) %>% 
-  mutate(model = map(data, ~loess(price_per ~ as.numeric(date), 
-                                  data = ., 
-                                  span = .25)),
+  mutate(model = map(data, 
+                     ~loess(price_per ~ as.numeric(date), 
+                            data = ., 
+                            span = .25)),
          preds = map2(model, data, augment)) %>% 
   unnest(preds)
 ```

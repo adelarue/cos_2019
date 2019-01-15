@@ -1,0 +1,12 @@
+.reveal code {
+    font-family: monospace;
+    font-size: 1.30em; }
+
+.reveal pre code {
+    display: block;
+    padding: 5px;
+    line-height: 1.2;
+    overflow: auto;
+    max-height: 400px;
+    word-wrap: normal; 
+	font-size: 1.30em; }
