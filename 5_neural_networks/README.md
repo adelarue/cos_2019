@@ -3,6 +3,14 @@ and how to implement them programmatically using TensorFlow/Keras.
 
 # Pre-Assignment
 
+## Project Submission
+
+Please submit a `flexdashboard` in `.html` format on Stellar. Your dashboard should be suitable for a presentation of no longer than 5 minutes. This time limit will be rigorously enforced. Your dashboard should include the name of both of your partners, each of whom should turn in a copy. 
+
+Please note that your dashboard is due Monday evening at 10pm, PRIOR to Session 5. No exceptions will be made, and no late submissions will be accepted. 
+
+## Technical Preparation
+
 If you do not already have the Anaconda distribution of python, you will also have to download it. You can get the distribution at https://www.anaconda.com/download/. You will need to do this before installing the Keras package because the R version of Keras calls python functions. 
 
 Afterwards please download the following two packages in R using the commands below:
