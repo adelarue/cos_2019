@@ -12,6 +12,9 @@ In addition to the installation instructions from the previous session, we will 
 - PyPlot
 - Mosek (see below)
 
+Note: the notebooks used in this session **should** work with Julia version 0.7+.
+If you are running Julia version 0.6.4 or earlier, please install an updated version.
+
 # Install Mosek instructions
 
 
