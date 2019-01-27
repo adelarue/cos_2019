@@ -15,11 +15,5 @@ In addition to the installation instructions from the previous session, we will 
 Note: the notebooks used in this session **should** work with Julia version 0.7+.
 If you are running Julia version 0.6.4 or earlier, please install an updated version.
 
-# Install Mosek instructions
-
-
-Install each one by running ``Pkg.add("xxx")`` where ``xxx`` is the package name
-from a Julia prompt or notebook.
-
 ## Questions?
 Email ryancw@mit.edu
