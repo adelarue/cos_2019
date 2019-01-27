@@ -10,12 +10,17 @@ In addition to the installation instructions from the previous session, we will 
 - DelimitedFiles
 - Distributions
 - PyPlot
-- Mosek
 - Test
 - TravelingSalesmanHeuristics (via Pkg.clone("https://github.com/evanfields/TravelingSalesmanHeuristics.jl/"))
 
 Note: the notebooks used in this session **should** work with Julia version 0.7+.
 If you are running Julia version 0.6.4 or earlier, please install an updated version.
+
+## Preassignment
+No results need to be submitted on Stellar for this pre-assignment. Please be sure that you correctly installed Gurobi before session 6.
+
+Optional: There are 1-2 moments in the session where I will use solvers not listed in this readme file. If you want to follow along, you can install Mosek (see here: https://www.mosek.com/, academic licenses free) and CPLEX (see [here](https://ibm.onthehub.com/WebStore/OfferingDetails.aspx?o=733c3d21-0ce1-e711-80fa-000d3af41938&pmv=00000000-0000-0000-0000-000000000000), academic licenses free). However, they take a while to install, so it's easier to watch the overhead projector for these parts. 
+
 
 ## Questions?
 Email ryancw@mit.edu
