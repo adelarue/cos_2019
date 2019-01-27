@@ -10,7 +10,9 @@ In addition to the installation instructions from the previous session, we will 
 - DelimitedFiles
 - Distributions
 - PyPlot
-- Mosek (see below)
+- Mosek
+- Test
+- TravelingSalesmanHeuristics (via Pkg.clone("https://github.com/evanfields/TravelingSalesmanHeuristics.jl/"))
 
 Note: the notebooks used in this session **should** work with Julia version 0.7+.
 If you are running Julia version 0.6.4 or earlier, please install an updated version.
