@@ -1,6 +1,6 @@
 # Nonlinear and Mixed-integer optimization
 
-This class will cover computational aspects of **convex and nonlinear optimization**, drawing from motivating examples in operations research and machine learning. Please follow the installation instructions below before the class. The preassignment at the end is a check that everything is installed correctly.
+This class will cover computational aspects of **convex and nonlinear optimization**, drawing from motivating examples in operations research and machine learning. Please follow the installation instructions below before the class. 
 
 ## Install Julia packages
 
