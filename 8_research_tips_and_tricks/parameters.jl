@@ -25,6 +25,12 @@ function getparameters(depths, maxfeatures, numestimators)
 	return df
 end
 
+# Let's get these parameters into the right format
 params = getparameters(depths, maxfeatures, numestimators)
-
+# and now let's save them to a JLD file
 @save "params.jld2" params
+
+# Let's make a folder to save the results (if necessary)
+try mkdir("results") end
+try mkdir("logs") end
+
