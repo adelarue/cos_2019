@@ -31,6 +31,6 @@ params = getparameters(depths, maxfeatures, numestimators)
 @save "params.jld2" params
 
 # Let's make a folder to save the results (if necessary)
-try mkdir("results") end
-try mkdir("logs") end
+try mkdir("results") finally end
+try mkdir("logs") finally end
 
