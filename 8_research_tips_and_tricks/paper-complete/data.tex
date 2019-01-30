@@ -1,0 +1,57 @@
+%!TEX root = paper.tex
+% The header above is for LaTeXTools, so we can build the PDF from this file
+% Without it, LaTeX will not build the file because it lacks the document class
+% and the rest of the header
+
+% Let's write a table - the table environment creates a special
+% box which LaTeX will place where convenient (a "float")
+% The inner tabular environment provides an actual table structure
+% The letter in bracket is a float specification, h stands for here
+% it tells LaTeX to 
+\begin{table}[h]
+\centering % Always a good idea
+% We create a table with three columns (left-aligned, centered, 
+% right-aligned) separated with vertical lines
+\begin{tabular}{|l|c|r|}
+% We can add horizontal lines with the \hline command
+\hline
+% The & symbol separates columns, and the \\ indicates a new line
+Name & Age & Profession\\
+\hline
+John Doe & 34 & Doctor\\
+\hline
+Jane Doe & 36 & Lawyer\\
+\hline
+Barack Obama & 57 & Unemployed\\
+\hline
+\end{tabular}
+% Always useful to include a caption
+\caption{A bad table}
+% The label is one of the most useful LaTeX features
+% It allows us to refer to this table in the text and let LaTeX
+% deal with the numbering
+\label{tab:bad}
+\end{table}
+
+% What's wrong with this table?
+% a) VERTICAL LINES ARE NEVER GOOD
+% b) top and bottom are not clearly delimited
+% c) heading row is not different from other rows
+
+% Now let's make a good-looking table using the booktabs package
+\begin{table}[h]
+\centering
+\begin{tabular}{lcr}
+\toprule
+Name & Age & Profession\\
+\midrule
+John Doe & 34 & Doctor\\
+Jane Doe & 36 & Lawyer\\
+Barack Obama & 57 & Unemployed\\
+\bottomrule
+\end{tabular}
+\caption{A good table}
+\label{tab:good}
+\end{table}
+
+Table~\ref{tab:bad} looks much worse than Table~\ref{tab:good}.
