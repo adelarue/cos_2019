@@ -12,6 +12,8 @@ This session will cover topics that are useful in research, from obtaining resul
 Install the Sublime Package Control following these instructions: https://packagecontrol.io/installation#st3
 Then, restart Sublime Text 3 and follow these instructions to install the LaTeXTools package: https://latextools.readthedocs.io/en/latest/install/#installation
 
+4. On your computer, install the Julia Plots package using `Pkg.add("Plots")`.
+
 4. [Sloan/ORC only] If you are affiliated with Sloan or the ORC, you have access to the Engaging cluster. In order to login, you first need to request an account by emailing stshelp@mit.edu.
 
 Once your account has been created, login to engaging.
