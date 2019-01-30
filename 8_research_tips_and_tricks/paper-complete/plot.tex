@@ -1,0 +1,13 @@
+%!TEX root = paper.tex
+
+We had some data in Table~\ref{tab:good}. Now we would like to plot the results of our simulation.
+
+% We put plots within another float environment called figure
+\begin{figure}[h]
+\centering
+% We can include graphics using a command from the graphicx package
+\includegraphics[width=\columnwidth]{../plot.pdf}
+\caption{Our beautiful Julia plot}
+% The tab: and fig: in the labels are by convention (not a rule)
+\label{fig:plot}
+\end{figure}

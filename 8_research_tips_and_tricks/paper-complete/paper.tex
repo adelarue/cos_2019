@@ -1,0 +1,40 @@
+% We first define the type of document this is
+% article is the most useful type - there are other 
+% including book and beamer for presentations
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+% Defining the LaTeX header
+\author{John Doe}
+\title{AirBnB and Random Forests}
+\date{} % leave empty for no date
+
+% The text of the document is inside the document environment
+\begin{document}
+
+% The maketitle command creates the header
+\maketitle
+
+% We can define titles (different levels)
+\section{Introduction}
+
+% We can write directly in the document, or we can
+% input another file with the \input command
+
+\input{intro}
+
+\section{Data}
+
+\input{data}
+
+\section{Results}
+
+\input{plot}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
+

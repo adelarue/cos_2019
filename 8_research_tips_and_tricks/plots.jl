@@ -1,20 +1,22 @@
-using JLD2, Plots
+# Load the packages we need
 
-@load "params.jld2" params
+# Load the parameters data frame
 
-R2_train = []
-R2_val = []
+# Create empty arrays that will hold the R2 values
 
-for i = 1:nrow(params)
-	experiment_id = params[i, :experiment_id]
-	@load "results/results-$experiment_id.jld2" R2tr R2va
-	push!(R2_train, R2tr)
-	push!(R2_val, R2va)
-end
+# Let's load all the results we want, and put them into the arrays above
 
-params[:R2_train] = R2_train
-params[:R2_val] = R2_val
 
-dataforplot = params[(params[:n_estimators] .== 160 .& params[:max_features] .== 2)]
 
-plot(params[:max_depth], [params[:R2_train] params[:R2_val]])
+
+
+
+
+
+# Add the R2 values to the dataframe
+
+
+# Subset the dataframe to only some of the results
+
+# Make the plot
+
