@@ -24,7 +24,17 @@ The following text gives an example of an acceptable submission for the project 
 *I will be looking at the Kaggle dataset on ski resorts, which is available to download at https://www.kaggle.com/beaubellamy/ski-resort. The dataset lists different ski resorts along with attributes such as country / region, altitude, size, difficulty of slopes, trails, snow reliability, facilities and equipment, average ticket price per age group, other services available. Here are two examples of questions I could investigate: 1. Pricing depending on the ski attributes of the resort, and 2. Number of resorts depending on the attributes of the region. One limitation of this dataset is the missing information of other touristic features of the given regions.*
 
 
-## Pre-assignment 1: Keeping current
+## Pre-assignment 1: Download `R` and RStudio
+
+We will be learning the `R` programming language for statistical computation. To interact with `R`, we will use RStudio to write and execute `R` commands. 
+
+* **Install `R`**: Navigate to https://cran.cnr.berkeley.edu/ and follow the instructions for your operating system. 
+* **Download RStudio**: Navigate to https://www.rstudio.com/products/rstudio/download/ and download RStudio Desktop with an Open Source License. 
+* **Test Your Installation**: Open RStudio and type 1+2 into the Console window, and type "Enter."
+* Later in the class we will require the most recent version of R (>= 3.3.1). If you already had R installed on your computer, you may have an earlier version. To check and update the R version, you can either follow the **Install `R`** instructions above or follow the steps in pre-lecture-assignment-1.R.
+
+
+## Pre-assignment 2: Keeping current
 
 To ensure that you have the most current versions of all files, please fire up a terminal, navigate to the directory into which you cloned the full set of materials for the course, and run `git pull`.  (Refer back to Session 1 if you're having trouble here.)
 
@@ -37,7 +47,7 @@ It may be helpful, however, to also keep handy the `S2_script_full.R` and `S2_ex
 (The `S2_master.Rmd` and `S2_master.html` files creating the [online session notes](https://philchodrow.github.io/cos_2017/2_wrangling_and_viz/S2_master.html) can be ignored.)
 
 
-## Pre-assignment 2: Installing libraries
+## Pre-assignment 3: Installing libraries
 
 We will use three libraries for this session: `tidyr`, `dplyr`, and `ggplot2`. These three packages (any many more) can all be conveniently loaded using the metalibrary `tidyverse`. You should have previously installed `tidyverse` prior to Session 1. In case you haven't, do so now: 
 
@@ -69,7 +79,8 @@ which should produce a cloud of points centered around the origin.
 
 **Please upload a screenshot of these two outputs to Stellar (the table and the scatter plot).**
 
-## Pre-assignment 3: Reproducible Reporting with RMarkdown
+
+## Pre-assignment 4: Reproducible Reporting with RMarkdown
 
 [R Markdown](https://rmarkdown.rstudio.com/) is a framework for easily producing interactive reports, presentations, and dashboards in `R`. 
 
